@@ -1,0 +1,436 @@
+@font-face {
+    font-family: 'customFont';
+    src: url(Resources/Fonts/Didact_Gothic/DidactGothic-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+main{
+    display: flex;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202728;
+    width: 3.5vw;
+    height: 100vh;
+}
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.sidebarIcons{
+    width: 30px;
+    height: 30px;
+}
+.logo{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.purchase{
+    background-color: #67CD5E;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B8082;
+    width: 96.5vw;
+    height: 40px;
+    color: #FFFFFF;
+}
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7db;
+    width: 96.5vw;
+    height: calc(100vh - 40px);
+}
+.purchaseDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96.5vw;
+    height: calc(100vh - 40px);
+    background-color: #edf8de;
+}
+
+.purchaseDetailHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 525px;
+    height: 40px;
+    background-color: #ffffff;
+}
+.purchaseDetailHead h3{
+    color: #292b2e;
+}
+.purchaseDetailsDiv{
+    width: 80vw;
+    height: auto;
+    padding: 10px 30px 10px 30px;
+    /* padding-bottom: 10px; */
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+.purchaseDetailLabel{
+    font-size: 20px;
+}
+.purchaseDetailInput{
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 7px;
+    /* margin-top: 20px; */
+    margin-right: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: #f3f3f3;
+}
+
+.purchaseSellerInput{
+    width: 300px;
+}
+
+.purchaseSellerSearchResultDiv{
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    max-height: 30vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    margin-left: 115px;
+    font-size: 20px;
+}
+
+.purchaseSellerSearchResultDiv ul{
+    border-top: 1px solid #999;
+    padding: 10px 10px;
+}
+.purchaseSellerSearchResultDiv ul li{
+    list-style: none;
+    font-size: 15px;
+    color: #576163;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.purchaseSellerSearchResultDiv ul li:hover{
+    background-color: #e9f3ff;
+}
+
+.purchaseBillNoInput{
+    width: 80px;
+    margin-left: 28px;
+    margin-right: 19px;
+}
+
+.purchaseBillDateInput{
+    width: 150px;
+    margin-left: 18px;
+}
+
+.searchMainDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.searchBackDiv{
+    display: flex;
+    align-items: center;
+    background-color: #D8E5E5;
+    border-radius: 40px;
+    width: 90vw;
+    height: 40px;
+}
+
+.imgSearch{
+    width: 25px;
+    padding-left: 15px;
+}
+.searchBox{
+    width: 25vw;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 70px;
+    padding-left: 40px;
+    font-size: 20px;
+    background-image: url(Resources/Images/Icons/search\ grey.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left 10px center;
+
+}
+
+.searchBox::placeholder{
+    font-size: 20px;
+    color: rgb(160, 164, 166);
+}
+
+.productSearchResultDiv{
+    position: absolute;
+    background-color: #ffffff;
+    width: 28vw;
+    max-height: 30vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    margin-left: 70px;
+    font-size: 20px;
+}
+
+.productSearchResultDiv ul{
+    border-top: 1px solid #999;
+    padding: 10px 10px;
+}
+.productSearchResultDiv ul li{
+    list-style: none;
+    font-size: 15px;
+    color: #576163;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.productSearchResultDiv ul li:hover{
+    background-color: #e9f3ff;
+}
+
+.purchaseListDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    width: 90vw;
+    /* background-color: #202728; */
+    height: 52vh;
+    overflow-x: auto;
+}
+
+.popUpMainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: calc(50vw - 300px - 5vw);
+    background-color: #d4e7eb;
+}
+
+.popUpMainDiv div input{
+    width: 110px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.tfGST{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 15px;
+    border: none;
+}
+.popUpMainDiv div{
+    margin: 20px 0px 0px 10px;
+    width: 190px;
+}
+
+.saveBtnDiv button{
+    width: 110px;
+    height: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #91afdd;
+}
+.popUpMainDivHidden{
+    display: none;
+}
+
+.addedProdList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #d2f0663b;
+    width: 90vw;
+    height: 50px;
+    border-radius: 40px;
+}
+
+
+.productListLabel{
+    color: #7B8082;
+}
+.productNameDiv{
+    margin-left: 30px;
+    width: 30vw;
+    overflow-x: hidden;
+}
+.productBatchDiv{
+    width: 15vw;
+}
+.productExpiryDiv{
+    width: 13vw;
+}
+.productQuantityDiv{
+    width: 10vw;
+}
+.productGSTDiv{
+    width: 10vw;
+}
+.productPriceDiv{
+    width: 10vw;
+}
+.productDiscountDiv{
+    width: 10vw;
+}
+.productAmountDiv{
+    width: 10vw;
+}
+.productEditDiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0vw;
+    margin-right: 3vw;
+    gap: 10px;
+}
+.productEditIcons{
+    width: 20px;
+}
+
+.purchaseFooterDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.buttonDiv{
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 40vw;
+    background-color: #ffffff;
+}
+
+.adjustmentDiv{
+    text-align: center;
+    background-color: #d8d9da3b;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px  #323d46;   
+     width: 23vw;
+    height: 20vh;
+}
+.adjustmentHead{
+    font-size: 20px;
+    color: #576163;
+    padding-top: 2px;
+}
+.overallDiscountLabel{
+    padding-right: 20px;
+    color: #576163;
+}
+.tfOverallDiscount{
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    width: 10vw;
+    height: 2vw;
+}
+.otherAdditionLabel{
+    padding-right: 21px;
+    color: #576163;
+}
+.tfOtherAddition{
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    width: 10vw;
+    height: 2vw;
+}
+.otherDeductionLabel{
+    padding-right: 10px;
+    color: #576163;
+}
+.tfOtherDeduction{
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    width: 10vw;
+    height: 2vw;
+}
+
+.total{
+    text-align: center;
+    background-color: #d8d9da3b;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px  #323d46;
+    width: 23vw;
+    height: 20vh;
+}
+.totalHead{
+    font-size: 20px;
+    color: #576163;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.gstLabel{
+    padding-right: 30px;
+    color: #576163;
+}
+.totalDiv{
+    padding-top: 10px;
+}
+.totalLabel{
+    font-size: 20px;
+    padding-right: 23px;
+    color: #576163;
+}
+.totalAmount{
+    font-size: 25px;
+    color: #175511;
+}
+
+.actionBtn{
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #202728;
+}

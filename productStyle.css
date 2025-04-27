@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'customFont';
+    src: url(Resources/Fonts/Didact_Gothic/DidactGothic-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+main{
+    display: flex;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202728;
+    width: 3.5vw;
+    height: 100vh;
+}
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.sidebarIcons{
+    width: 30px;
+    height: 30px;
+}
+.logo{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.product{
+    background-color: #67CD5E;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B8082;
+    width: 96.5vw;
+    height: 40px;
+    color: #FFFFFF;
+}
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7db;
+    width: 96.5vw;
+    height: calc(100vh - 40px);
+}
+.productDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48.25vw;
+    height: calc(100vh - 40px);
+    background-color: #f7f8e1;
+}
+.productEditDiv{
+    width: 48.25vw;
+    height: calc(100vh - 40px);
+    background-color: #dd4024;
+}
+.productDetailHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 525px;
+    height: 40px;
+    background-color: #ffffff;
+}
+.productDetailHead h3{
+    color: #292b2e;
+}
+.productDetailsDiv{
+    width: 500px;
+    padding-left: 30px;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+.productDetailLabel{
+    font-size: 20px;
+}
+.productDetailInput{
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 7px;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: #f3f3f3;
+}
+.productNameInput{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.productCompanyInput{
+    margin-left: 62px;
+}
+.addCompanySearchResultDiv{
+    position: absolute;
+    background-color: #ffffff;
+    width: 277px;
+    max-height: 30vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    margin-left: 147px;
+    font-size: 20px;
+}
+
+.addCompanySearchResultDiv ul{
+    border-top: 1px solid #999;
+    padding: 10px 10px;
+}
+.addCompanySearchResultDiv ul li{
+    list-style: none;
+    font-size: 15px;
+    color: #576163;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.addCompanySearchResultDiv ul li:hover{
+    background-color: #e9f3ff;
+}
+
+.addClassificationSearchResultDiv{
+    position: absolute;
+    background-color: #ffffff;
+    width: 119px;
+    max-height: 30vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    margin-left: 147px;
+    font-size: 20px;
+}
+
+.addClassificationSearchResultDiv ul{
+    border-top: 1px solid #999;
+    padding: 10px 10px;
+}
+.addClassificationSearchResultDiv ul li{
+    list-style: none;
+    font-size: 15px;
+    color: #576163;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.addClassificationSearchResultDiv ul li:hover{
+    background-color: #e9f3ff;
+}
+
+.editProductSearchResultDiv{
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    max-height: 30vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    margin-left: 147px;
+    font-size: 20px;
+}
+
+.editProductSearchResultDiv ul{
+    border-top: 1px solid #999;
+    padding: 10px 10px;
+}
+.editProductSearchResultDiv ul li{
+    list-style: none;
+    font-size: 15px;
+    color: #576163;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.editProductSearchResultDiv ul li:hover{
+    background-color: #e9f3ff;
+}
+
+.productClassificationInput{
+    width: 100px;
+    margin-left: 28px;
+    margin-right: 19px;
+}
+.productRackInput{
+    width: 70px;
+    margin-left: 18px;
+}
+.productCommentInput{
+    height: 70px;
+    margin-left: 49px;
+    margin-bottom: 40px;
+}
+.buttonDiv{
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    border-radius: 15px;
+    margin-top: 70px;
+    padding: 5px;
+    width: 525px;
+    background-color: #ffffff;
+}
+.actionBtn{
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #202728;
+}

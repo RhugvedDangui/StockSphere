@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="productEditStyle.css">
+</head>
+
+<body>
+    <main>
+        <div class="sidebar" onclick="window.location.href='invoice.html' ">
+            <div class="logo iconDiv">
+                <img src="Resources/Images/Icons/logo.png" alt="logo" class="sidebarIcons logo">
+            </div>
+            <div class="invoice iconDiv">
+                <img src="Resources/Images/Icons/invoice.png" alt="invoice" class="sidebarIcons">
+            </div>
+            <div class="invoiceHistory iconDiv">
+                <img src="Resources/Images/Icons/invoiceHistory.png" alt="invoiceHistory" class="sidebarIcons">
+            </div>
+            <div class="purchase iconDiv">
+                <img src="Resources/Images/Icons/purchase.png" alt="purchase" class="sidebarIcons">
+            </div>
+            <div class="reports iconDiv">
+                <img src="Resources/Images/Icons/report.png" alt="" class="sidebarIcons">
+            </div>
+            <div class="product iconDiv">
+                <img src="Resources/Images/Icons/product.png" alt="product" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv">
+                <img src="Resources/Images/Icons/supplier.png" alt="supplier" class="sidebarIcons">
+            </div>
+        </div>
+        <div class="mainPage">
+            <div class="header">
+                <h3>EDIT PRODUCT</h3>
+            </div>
+            <div class="mainContent">
+                <div class="productDiv">
+
+                    <div class="productDetailsDiv">
+                        <label class="productDetailLabel"> Product Name</label>
+                        <input type="text" class="productDetailInput productNameInput" autocomplete="off"
+                            id="productEditNameInput">
+                        <div class="editProductSearchResultDiv" id="editProductSearchResultDiv">
+                            <!-- <ul>
+                                    <li>JavaScript</li>
+                                    <li>Web Development</li>
+                                </ul>    -->
+                        </div>
+                        <label class="productDetailLabel">Company</label>
+                        <input type="text" class="productDetailInput productCompanyInput" id="productEditCompanyInput"
+                            autocomplete="off"><br>
+                        <label class="productDetailLabel">Classification</label>
+                        <input type="text" class="productDetailInput productClassificationInput"
+                            id="productEditClassificationInput" autocomplete="off">
+                        <label class="productDetailLabel">Rack</label>
+                        <input type="text" class="productDetailInput productRackInput" id="productEditRackInput"
+                            autocomplete="off">
+                        <label class="productDetailLabel">Comments</label>
+                        <input type="text" class="productDetailInput productCommentInput" id="productEditCommentInput"
+                            autocomplete="off">
+                    </div>
+
+                    <div id="productList" class="productListDiv">
+
+                        <div class="productList">
+                            <div class="productNameDiv">
+                                <h4 class="productName productListText">WHISKAS GRAVY TUNA</h4>
+                                <h5 class="productLabel productListLabel">Product</h5>
+                            </div>
+                            <div class="productBatchDiv">
+                                <h4 class="productListText">ABCD1234</h4>
+                                <h5 class="productListLabel">Batch</h5>
+                            </div>
+                            <div class="productExpiryDiv">
+                                <h4 class="productListText">30/02/30</h4>
+                                <h5 class="productListLabel">Expiry</h5>
+                            </div>
+                            <div class="productQuantityDiv">
+                                <h4 class="productListText">25</h4>
+                                <h5 class="productListLabel">Quantity</h5>
+                            </div>
+                            <div class="productPriceDiv">
+                                <h4 class="productListText">50.00</h4>
+                                <h5 class="productListLabel">Price</h5>
+                            </div>
+                            <div class="productDiscountDiv">
+                                <h4 class="productListText">5%</h4>
+                                <h5 class="productListLabel">Discount</h5>
+                            </div>
+                            <div class="productAmountDiv">
+                                <h4 class="productListText">1250.00</h4>
+                                <h5 class="productListLabel">Amount</h5>
+                            </div>
+                            <div class="productEditDiv">
+                                <img src="Resources/Images/Icons/edit.svg" alt="edit" class="editIcon productEditIcons"
+                                    onclick="editProduct()">
+                                <img src="Resources/Images/Icons/delete.svg" alt="delete"
+                                    class="deleteIcon productEditIcons">
+                            </div>
+                        </div>
+
+                        <!--  //////////////////////////////////////////////-->
+                    </div>
+                    <div class="buttonDiv">
+                        <button class="actionBtn">CLEAR</button>
+                        <button class="actionBtn">SAVE</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+    <script src="productEditScript.js"></script>
+</body>
+
+</html>

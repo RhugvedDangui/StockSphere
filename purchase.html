@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="purchaseStyle.css">
+</head>
+
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="logo iconDiv" onclick="window.location.href='#' ">
+                <img src="Resources/Images/Icons/logo.png" alt="logo" class="sidebarIcons logo">
+            </div>
+            <div class="invoice iconDiv" onclick="window.location.href='invoice.html' ">
+                <img src="Resources/Images/Icons/invoice.png" alt="invoice" class="sidebarIcons">
+            </div>
+            <div class="invoiceHistory iconDiv">
+                <img src="Resources/Images/Icons/invoiceHistory.png" alt="invoiceHistory" class="sidebarIcons">
+            </div>
+            <div class="purchase iconDiv" onclick="window.location.href='purchase.html' ">
+                <img src="Resources/Images/Icons/purchase.png" alt="purchase" class="sidebarIcons">
+            </div>
+            <div class="reports iconDiv">
+                <img src="Resources/Images/Icons/report.png" alt="" class="sidebarIcons">
+            </div>
+            <div class="product iconDiv" onclick="window.location.href='product.html' ">
+                <img src="Resources/Images/Icons/product.png" alt="product" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv" onclick="window.location.href='addSeller.html' ">
+                <img src="Resources/Images/Icons/supplier.png" alt="supplier" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv">
+                <img src="Resources/Images/Icons/logout.png" alt="supplier" class="sidebarIcons" onclick=" window.location.href='logout.php'">
+            </div>
+        </div>
+        <div class="mainPage">
+            <div class="header">
+                <h3>PURCHASE</h3>
+            </div>
+            <div class="mainContent">
+                <div class="purchaseDiv">
+
+                    <div class="purchaseDetailsDiv">
+                        <label class="purchaseDetailLabel"> Seller Name</label>
+                        <input type="text" class="purchaseDetailInput purchaseSellerInput" autocomplete="off"
+                            id="purchaseSellerInput">
+                        <div class="purchaseSellerSearchResultDiv" id="purchaseSellerSearchResultDiv">
+                            <!-- <ul>
+                                    <li>JavaScript</li>
+                                    <li>Web Development</li>
+                                </ul>    -->
+                        </div>
+                        <label class="purchaseDetailLabel">Bill No</label>
+                        <input type="text" class="purchaseDetailInput purchaseBillNoInput" id="purchaseBillNoInput"
+                            autocomplete="off">
+                        <label class="purchaseDetailLabel">Bill Date</label>
+                        <input type="date" class="purchaseDetailInput purchaseBillDateInput" id="purchaseBillDateInput"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="searchMainDiv">
+                        <div class="searchBackDiv">
+                            <img src="Resources/Images/Icons/search.svg" alt="search" class="imgSearch">
+                            <div class="searchProductDiv">
+                                <input type="text" class="productSearchBox searchBox" placeholder="Search Products"
+                                    id="productSearchBox">
+                                <div class="productSearchResultDiv" id="productSearchResult">
+                                    <!-- <ul>
+                                        <li>JavaScript</li>
+                                        <li>Web Development</li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                            <input type="text" class="batchSearchBox searchBox" placeholder="Search Batch">
+                        </div>
+                    </div>
+
+
+                    <!--                          /////////////////////////////////////////////////////////                      -->
+
+
+
+                    <div id="purchaseList" class="purchaseListDiv">
+
+                        <div id="popUpDiv" class="popUpMainDiv popUpMainDivHidden">
+                            <div class="batchNoDiv">
+                                <label for="purchaseBatchNo">Batch No.</label>
+                                <input type="text" name="purchaseBatchNo" id="purchaseBatchNo">
+                            </div>
+                            <div class="expDateDiv">
+                                <label for="purchaseExpDate">Expiry</label>
+                                <input type="date" name="purchaseExpDate" id="purchaseExpDate">
+                            </div>
+                            <div class="gstDiv">
+                                <label for="purchaseGst">GST</label>
+                                <select name="purchaseGst" id="purchaseGst" class="tfGST">
+                                    <option value="5">5 %</option>
+                                    <option value="12">12 %</option>
+                                    <option value="18">18 %</option>
+                                    <option value="24">24 %</option>
+                                </select>
+                            </div>
+                            <div class="purchaseRateDiv">
+                                <label for="purchaseRate">P. Rate &nbsp; &nbsp;</label>
+                                <input type="text" name="purchaseRate" id="purchaseRate">
+                            </div>
+                            <div class="sellingRate">
+                                <label for="sellingRate">S. Rate</label>
+                                <input type="text" name="sellingRate" id="sellingRate">
+                            </div>
+                            <div class="purchaseDiscountDiv">
+                                <label for="purchaseDiscount">Disc.</label>
+                                <input type="number" name="purchaseDiscount" id="purchaseDiscount" value=0 >
+                            </div>
+                            <div class="purchaseQtyDiv">
+                                <label for="purchaseQty">Qty &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                                <input type="number" name="purchaseQty" id="purchaseQty">
+                            </div>
+                            <div class="purchaseFreeQtyDiv">
+                                <label for="purchaseFreeQty"> Free &nbsp;</label>
+                                <input type="number" name="purchaseFreeQty" id="purchaseFreeQty" value=0>
+                            </div>
+                            <div class="saveBtnDiv">
+                                <button id="popUpSaveBtn" class="saveBtn">Save</button>
+                            </div>
+                        </div>
+
+                        <div id="addedProdList">
+                            <!-- <div class="productList">
+                                <div class="productNameDiv">
+                                    <h4 class="productName productListText">WHISKAS GRAVY TUNA</h4>
+                                    <h5 class="productLabel productListLabel">Product</h5>
+                                </div>
+                                <div class="productBatchDiv">
+                                    <h4 class="productListText">ABCD1234</h4>
+                                    <h5 class="productListLabel">Batch</h5>
+                                </div>
+                                <div class="productExpiryDiv">
+                                    <h4 class="productListText">30/02/30</h4>
+                                    <h5 class="productListLabel">Expiry</h5>
+                                </div>
+                                <div class="productGSTDiv">
+                                    <h4 class="productListText">5%</h4>
+                                    <h5 class="productListLabel">GST</h5>
+                                </div>
+                                <div class="productPriceDiv">
+                                    <h4 class="productListText">50.00</h4>
+                                    <h5 class="productListLabel">P.Rate</h5>
+                                </div>
+                                <div class="productPriceDiv">
+                                    <h4 class="productListText">50.00</h4>
+                                    <h5 class="productListLabel">S.Rate</h5>
+                                </div>
+                                <div class="productQuantityDiv">
+                                    <h4 class="productListText">25</h4>
+                                    <h5 class="productListLabel">Qty</h5>
+                                </div>
+                                <div class="productQuantityDiv">
+                                    <h4 class="productListText">25</h4>
+                                    <h5 class="productListLabel">Free</h5>
+                                </div>
+
+                                <div class="productDiscountDiv">
+                                    <h4 class="productListText">5%</h4>
+                                    <h5 class="productListLabel">Discount</h5>
+                                </div>
+                                <div class="productAmountDiv">
+                                    <h4 class="productListText">1250.00</h4>
+                                    <h5 class="productListLabel">Amount</h5>
+                                </div>
+                                <div class="productEditDiv">
+                                    <img src="Resources/Images/Icons/edit.svg" alt="edit"
+                                        class="editIcon productEditIcons" onclick="editProduct()">
+                                    <img src="Resources/Images/Icons/delete.svg" alt="delete"
+                                        class="deleteIcon productEditIcons">
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <!--  //////////////////////////////////////////////-->
+                    </div>
+                    <div class="purchaseFooterDiv">
+                        <div class="buttonDiv">
+                            <button class="actionBtn">CLEAR</button>
+                            <button class="actionBtn" id="saveBtn">SAVE</button>
+                        </div>
+                        <div class="adjustmentDiv">
+                            <h4 class="adjustmentHead">Adjustments</h4>
+                            <label for="" class="overallDiscountLabel">Discount</label>
+                            <input type="number" class="tfOverallDiscount" id="overallDiscount"><br>
+                            <label for="" class="otherAdditionLabel">Addition</label>
+                            <input type="number" class="tfOtherAddition" id="tfOtherAddition"><br>
+                            <label for="" class="otherDeductionLabel">Deduction</label>
+                            <input type="number" class="tfOtherDeduction" id="tfOtherDeduction">
+                        </div>
+                        <div class="total">
+                            <h4 class="totalHead">Total</h4>
+
+                            <div class="totalDiv">
+                                <label class="totalLabel">Total</label>
+                                <label class="totalAmount" id="totalAmount">00.00</label><br>
+                                <label class="totalLabel">Net Total</label>
+                                <label class="totalAmount" id="netAmount">00.00</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+    <script src="purchaseScript.js"></script>
+</body>
+
+</html>

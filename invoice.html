@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="invoiceStyle.css">
+    <link rel="stylesheet" href="Resources/Fonts/Poppins">
+</head>
+
+<body onload="loadPageDetails()">
+    <main>
+        <div class="sidebar">
+            <div class="logo iconDiv" onclick="window.location.href='#' ">
+                <img src="Resources/Images/Icons/logo.png" alt="logo" class="sidebarIcons logo">
+            </div>
+            <div class="invoice iconDiv" onclick="window.location.href='invoice.html' ">
+                <img src="Resources/Images/Icons/invoice.png" alt="invoice" class="sidebarIcons">
+            </div>
+            <div class="invoiceHistory iconDiv">
+                <img src="Resources/Images/Icons/invoiceHistory.png" alt="invoiceHistory" class="sidebarIcons">
+            </div>
+            <div class="purchase iconDiv" onclick="window.location.href='purchase.html' ">
+                <img src="Resources/Images/Icons/purchase.png" alt="purchase" class="sidebarIcons">
+            </div>
+            <div class="reports iconDiv">
+                <img src="Resources/Images/Icons/report.png" alt="" class="sidebarIcons">
+            </div>
+            <div class="product iconDiv" onclick="window.location.href='product.html' ">
+                <img src="Resources/Images/Icons/product.png" alt="product" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv" onclick="window.location.href='addSeller.html' ">
+                <img src="Resources/Images/Icons/supplier.png" alt="supplier" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv">
+                <img src="Resources/Images/Icons/logout.png" alt="supplier" class="sidebarIcons" onclick=" window.location.href='logout.php'">
+            </div>
+        </div>
+        <div class="mainPage">
+            <div class="header">
+                <h3>INVOICE</h3>
+            </div>
+            <div class="options">
+                <a href="#" class="optionsTag" id="saveBtn" style="text-decoration: none;">SAVE</a>
+                <a href="#" class="optionsTag" style="text-decoration: none;">PRINT</a>
+                <a href="#" class="optionsTag" style="text-decoration: none;">NEW</a>
+            </div>
+            <div class="invoiceInfo">
+                <p class="infoTag">INVOICE:</p>
+                <p class="invoiceNo" id="invoiceNo">0000</p>
+                <p class="infoTag">DATE:</p>
+                <p class="date" id="date">00/00/0000</p>
+            </div>
+            <div class="searchMainDiv">
+                <div class="searchBackDiv">
+                    <img src="Resources/Images/Icons/search.svg" alt="search" class="imgSearch">
+                    <div class="searchProductDiv">
+                        <input type="text" class="productSearchBox searchBox" placeholder="Search Products"
+                            id="productSearchBox">
+                        <div class="productSearchResultDiv" id="productSearchResult">
+                            <!-- <ul>
+                                <li>JavaScript</li>
+                                <li>Web Development</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <input type="text" class="batchSearchBox searchBox" placeholder="Search Batch">
+                </div>
+            </div>
+
+            <div class="productAddList">
+                <div class="editPopUp editPopUpHidden" id="productEditPopUp">
+                    <h5 class="popUpProductName" id="popUpProductName">WHISKAS</h5>
+                    <div class="popUpBatchDiv popUpSubDiv">
+                        <select type="text" class="popUpBatch" id="popUpBatch"></select>
+                        <h5 class="popUpBatchLabel popUpLabel">BATCH</h5>
+                    </div>
+                    <div class="popUpQtyDiv popUpSubDiv">
+                        <div class="popUpQtyInputDiv">
+                            <input type="number" class="popUpQty" id="popUpQty">
+                            <h5 class="availableQty" id="availableQty"> &nbsp;</h5>
+                        </div>
+                        <h5 class="popUpQtyLabel popUpLabel">QUANTITY</h5>
+                    </div>
+                    <div class="popUpExpiryGSTDiv">
+                        <div class="popUpExpiryDiv">
+                            <input type="text" id="popUpExpiry">
+                            <h5 class="popUpLabel">EXPIRY</h5>
+                        </div>
+                        <div class="popUpGSTDiv">
+                            <input type="text" id="popUpGST">
+                            <h5 class="popUpLabel">GST</h5>
+                        </div>
+                    </div>
+                    <div class="popUpDiscPriceDiv">
+                        <div>
+                            <input type="number" id="popUpDiscount">
+                            <h5 class="popUpLabel">DISCOUNT</h5>
+                        </div>
+                        <div>
+                            <input type="number" id="popUpPrice">
+                            <h5 class="popUpLabel">PRICE</h5>
+                        </div>
+                    </div>
+                    <div class="popUpActionBtnDiv">
+                        <button class="cancelBtn" id="cancelBtn">CANCEL</button>
+                        <button class="addBtn" id="addBtn">ADD</button>
+                    </div>
+                </div>
+
+                <div id="productList" class="productListDiv">
+
+                    <!-- <div class="productList" >
+                    <div class="productNameDiv">
+                        <h4 class="productName productListText">WHISKAS GRAVY TUNA</h4>
+                        <h5 class="productLabel productListLabel">Product</h5>
+                    </div>
+                    <div class="productBatchDiv">
+                        <h4 class="productListText">ABCD1234</h4>
+                        <h5 class="productListLabel">Batch</h5>
+                    </div>
+                    <div class="productExpiryDiv">
+                        <h4 class="productListText">30/02/30</h4>
+                        <h5 class="productListLabel">Expiry</h5>
+                    </div>
+                    <div class="productQuantityDiv">
+                        <h4 class="productListText">25</h4>
+                        <h5 class="productListLabel">Quantity</h5>
+                    </div>
+                    <div class="productPriceDiv">
+                        <h4 class="productListText">50.00</h4>
+                        <h5 class="productListLabel">Price</h5>
+                    </div>
+                    <div class="productDiscountDiv">
+                        <h4 class="productListText">5%</h4>
+                        <h5 class="productListLabel">Discount</h5>
+                    </div>
+                    <div class="productAmountDiv">
+                        <h4 class="productListText">1250.00</h4>
+                        <h5 class="productListLabel">Amount</h5>
+                    </div>
+                    <div class="productEditDiv">
+                        <img src="Resources/Images/Icons/edit.svg" alt="edit" class="editIcon productEditIcons" onclick="editProduct()">
+                        <img src="Resources/Images/Icons/delete.svg" alt="delete" class="deleteIcon productEditIcons">
+                    </div>
+                </div> -->
+
+                    <!--  //////////////////////////////////////////////-->
+
+
+                </div>
+            </div>
+            <div class="footerDiv">
+                <div class="customerDetails">
+                    <h4 class="customerDetailsHead">Customer Details</h4>
+                    <label class="cname">Name</label>
+                    <input type="text" class="tfcname tfCustomerDetails"><br>
+                    <label class="cmobile">Mobile No.</label>
+                    <input type="text" class="tfcphone tfCustomerDetails">
+                </div>
+                <div class="payment">
+                    <h4 class="paymentHead">Payment</h4>
+
+                    <label class="pTypeText">Type</label>
+                    <select name="PaymentOptions" id="paymentType" class="pTypeOptions">
+                        <option value="CASH">CASH</option>
+                        <option value="UPI">UPI</option>
+                        <option value="SPLIT">SPLIT</option>
+                        <option value="CARD">CARD</option>
+                    </select><br>
+                    <label for="cash" class="labelSplitCashOption">CASH</label>
+                    <input type="number" class="cashSplit tfSplit" id="cashSplit" value=0><br>
+                    <label for="upi" class="labelSplitUPIOption">UPI</label>
+                    <input type="number" class="upiSplit tfSplit" id="upiSplit" value=0>
+                </div>
+                <div class="adjustment">
+                    <h4 class="adjustmentHead">Adjustments</h4>
+                    <label for="" class="overallDiscountLabel">Discount</label>
+                    <input type="number" class="tfOverallDiscount" id="overallDiscount"><br>
+                    <label for="" class="otherAdditionLabel">Addition</label>
+                    <input type="number" class="tfOtherAddition" id="tfOtherAddition" value=0><br>
+                    <label for="" class="otherDeductionLabel">Deduction</label>
+                    <input type="number" class="tfOtherDeduction" id="tfOtherDeduction" value=0>
+                </div>
+                <div class="total">
+                    <h4 class="totalHead">Total</h4>
+                    
+                    <div class="totalDiv">
+                        <label class="totalLabel">Amount</label>
+                        <label class="totalAmount" id="amount">00.00</label><br>
+                        <label class="totalLabel">Net Amount</label>
+                        <label class="totalAmount" id="netAmount">00.00</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="invoiceScript.js"></script>
+</body>
+
+</html>

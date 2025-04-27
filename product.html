@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="productStyle.css">
+</head>
+
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="logo iconDiv" onclick="window.location.href='#' ">
+                <img src="Resources/Images/Icons/logo.png" alt="logo" class="sidebarIcons logo">
+            </div>
+            <div class="invoice iconDiv" onclick="window.location.href='invoice.html' ">
+                <img src="Resources/Images/Icons/invoice.png" alt="invoice" class="sidebarIcons">
+            </div>
+            <div class="invoiceHistory iconDiv">
+                <img src="Resources/Images/Icons/invoiceHistory.png" alt="invoiceHistory" class="sidebarIcons">
+            </div>
+            <div class="purchase iconDiv" onclick="window.location.href='purchase.html' ">
+                <img src="Resources/Images/Icons/purchase.png" alt="purchase" class="sidebarIcons">
+            </div>
+            <div class="reports iconDiv">
+                <img src="Resources/Images/Icons/report.png" alt="" class="sidebarIcons">
+            </div>
+            <div class="product iconDiv" onclick="window.location.href='product.html' ">
+                <img src="Resources/Images/Icons/product.png" alt="product" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv" onclick="window.location.href='addSeller.html' ">
+                <img src="Resources/Images/Icons/supplier.png" alt="supplier" class="sidebarIcons">
+            </div>
+            <div class="supplier iconDiv">
+                <img src="Resources/Images/Icons/logout.png" alt="supplier" class="sidebarIcons" onclick=" window.location.href='logout.php'">
+            </div>
+        </div>
+        <div class="mainPage">
+            <div class="header">
+                <h3>PRODUCT</h3>
+            </div>
+            <div class="mainContent">
+                <div class="productDiv">
+                    <div class="productDetailHead">
+                        <h3>ADD PRODUCT</h3>
+                    </div>
+                    <div class="productDetailsDiv">
+                        <label  class="productDetailLabel"> Product Name</label>
+                        <input type="text" class="productDetailInput productNameInput" id="productAddNameInput" autocomplete="off"><br>
+                        <label class="productDetailLabel">Company</label>
+                        <input type="text" class="productDetailInput productCompanyInput" id="productAddCompanyInput" autocomplete="off"><br>
+                        <div class="addCompanySearchResultDiv" id="addCompanySearchResult">
+                            <!-- <ul>
+                                <li>JavaScript</li>
+                                <li>Web Development</li>
+                            </ul> -->
+                        </div>
+                        <label class="productDetailLabel">Classification</label>
+                        <input type="text" class="productDetailInput productClassificationInput" id="productAddClassificationInput" autocomplete="off">
+                        <div class="addClassificationSearchResultDiv" id="addClassificationSearchResult">
+                            <!-- <ul>
+                                <li>JavaScript</li>
+                                <li>Web Development</li>
+                            </ul> -->
+                        </div>
+                        <label class="producAddtDetailLabel">Rack</label>
+                        <input type="text" class="productDetailInput productRackInput" id="productAddRackInput" autocomplete="off"><br>
+                        <label class="productDetailLabel">Comments</label>
+                        <input type="text" class="productDetailInput productCommentInput" id="productAddCommentInput" autocomplete="off">
+                    </div>
+                    <div class="buttonDiv">
+                        <button class="actionBtn" id="addClearBtn">CLEAR</button>
+                        <button class="actionBtn" id="addSaveBtn">SAVE</button>
+                    </div>
+                </div>
+
+               
+            </div>
+
+        </div>
+    </main>
+    <script src="productScript.js"></script>
+</body>
+
+</html>
